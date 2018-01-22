@@ -13,7 +13,7 @@ import UIKit
 internal class FrameView: UIVisualEffectView {
 
     internal init() {
-        super.init(effect: UIBlurEffect(style: .light))
+        super.init(effect: UIBlurEffect(style: .dark))
         commonInit()
     }
 
