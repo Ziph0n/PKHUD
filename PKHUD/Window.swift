@@ -67,7 +67,7 @@ internal class ContainerView: UIView {
         willHide = true
 
         if anim {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.frameView.alpha = 0.0
                 self.hideBackground(animated: false)
             }, completion: { _ in finalize(true) })
@@ -86,7 +86,7 @@ internal class ContainerView: UIView {
 
     internal func showBackground(animated anim: Bool) {
         if anim {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.backgroundView.alpha = 1.0
             })
         } else {
