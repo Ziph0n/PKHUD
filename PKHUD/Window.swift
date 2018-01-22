@@ -67,7 +67,7 @@ internal class ContainerView: UIView {
         willHide = true
 
         if anim {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.frameView.alpha = 0.0
                 self.hideBackground(animated: false)
             }, completion: { _ in finalize(true) })
@@ -79,14 +79,14 @@ internal class ContainerView: UIView {
 
     fileprivate let backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white:0.0, alpha:0.25)
+        view.backgroundColor = UIColor(white:0.0, alpha:0.5)
         view.alpha = 0.0
         return view
     }()
 
     internal func showBackground(animated anim: Bool) {
         if anim {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.backgroundView.alpha = 1.0
             })
         } else {
@@ -104,4 +104,3 @@ internal class ContainerView: UIView {
         }
     }
 }
-
